@@ -3,12 +3,11 @@ package com.hiext.szrcb.request;
 import com.hiext.szrcb.util.PropertiesUtil;
 
 /**
- * 
  * @author angy
- * @date 2020/07/04
+ * * @since 2020/07/04
  */
 public class SZRCBConstant {
-    private static PropertiesUtil propertiesUtil = new PropertiesUtil("application.properties");
+    private static final PropertiesUtil propertiesUtil = new PropertiesUtil("application.properties");
     public static final String SDK_NAME = "SZRCB-SDK";
     public static final String DEV_COMPANY = "hiext.com";
     private static final String PORT = "10010";

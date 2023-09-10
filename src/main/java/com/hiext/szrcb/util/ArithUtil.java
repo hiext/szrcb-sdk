@@ -1,17 +1,19 @@
 package com.hiext.szrcb.util;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * 数据计算
- * 
+ *
  * @author angy
- * @date 2020/08/08
+ * * @since 2020/08/08
  */
 public class ArithUtil {
     private static final int DEF_DIV_SCALE = 10;
 
-    private ArithUtil() {}
+    private ArithUtil() {
+    }
 
     /**
      * +
@@ -36,7 +38,7 @@ public class ArithUtil {
             d2 = 0.0;
         BigDecimal b1 = new BigDecimal(Double.toString(d1));
         BigDecimal b2 = new BigDecimal(Double.toString(d2));
-        return b1.add(b2).setScale(digit, BigDecimal.ROUND_HALF_UP).doubleValue();
+        return b1.add(b2).setScale(digit, RoundingMode.HALF_UP).doubleValue();
 
     }
 
@@ -63,7 +65,7 @@ public class ArithUtil {
             d2 = 0.0;
         BigDecimal b1 = new BigDecimal(Double.toString(d1));
         BigDecimal b2 = new BigDecimal(Double.toString(d2));
-        return b1.subtract(b2).setScale(digit, BigDecimal.ROUND_HALF_UP).doubleValue();
+        return b1.subtract(b2).setScale(digit, RoundingMode.HALF_UP).doubleValue();
     }
 
     /**
@@ -89,7 +91,7 @@ public class ArithUtil {
             d2 = 0.0;
         BigDecimal b1 = new BigDecimal(Double.toString(d1));
         BigDecimal b2 = new BigDecimal(Double.toString(d2));
-        return b1.multiply(b2).setScale(digit, BigDecimal.ROUND_HALF_UP).doubleValue();
+        return b1.multiply(b2).setScale(digit, RoundingMode.HALF_UP).doubleValue();
 
     }
 
@@ -117,7 +119,7 @@ public class ArithUtil {
             return 0.0;
         BigDecimal b1 = new BigDecimal(Double.toString(d1));
         BigDecimal b2 = new BigDecimal(Double.toString(d2));
-        return b1.divide(b2, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
+        return b1.divide(b2, scale, RoundingMode.HALF_UP).doubleValue();
 
     }
 
@@ -125,7 +127,7 @@ public class ArithUtil {
         if (num == null) {
             return num;
         } else {
-            return new BigDecimal(num).setScale(digit, BigDecimal.ROUND_HALF_UP).doubleValue();
+            return new BigDecimal(num).setScale(digit, RoundingMode.HALF_UP).doubleValue();
         }
     }
 }

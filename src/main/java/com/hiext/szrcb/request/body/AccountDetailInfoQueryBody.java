@@ -5,9 +5,9 @@ import javax.validation.constraints.Size;
 
 /**
  * 3.1.2 查询账户明细 (200110)
- * 
+ *
  * @author angy
- * @date 2020/11/03
+ * * @since 2020/11/03
  */
 public class AccountDetailInfoQueryBody {
     @NotNull(message = "主体账号 char(35)空限制")

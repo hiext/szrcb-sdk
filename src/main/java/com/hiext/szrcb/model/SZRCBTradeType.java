@@ -24,7 +24,8 @@ public enum SZRCBTradeType {
     /**
      * 普通外部转账
      */
-    PTWBZZ("普通外部转账", "PTWBZZ", "1"),;
+    PTWBZZ("普通外部转账", "PTWBZZ", "1"),
+    ;
 
     private final String name;
     private final String value;

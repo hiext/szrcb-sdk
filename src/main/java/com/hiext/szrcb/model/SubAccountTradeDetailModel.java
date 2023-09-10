@@ -2,9 +2,9 @@ package com.hiext.szrcb.model;
 
 /**
  * 子账号交易明细
- * 
+ *
  * @author angy
- * @date 2020/11/01
+ * * @since 2020/11/01
  */
 public class SubAccountTradeDetailModel {
     /**

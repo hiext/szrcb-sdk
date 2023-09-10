@@ -7,9 +7,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 3.1.10 多级账簿明细查询（200103）
- * 
+ *
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 @XStreamAlias("ap")
 public class SubAccountTradeDetailQueryParam extends BaseRequestParam {

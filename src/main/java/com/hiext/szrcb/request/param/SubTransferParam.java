@@ -7,9 +7,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 3.1.11 多级账簿余额调整（100105）
- * 
+ *
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 @XStreamAlias("ap")
 public class SubTransferParam extends BaseRequestParam {

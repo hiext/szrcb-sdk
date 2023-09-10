@@ -36,7 +36,7 @@ public class SubBalanceModel {
 
     /**
      * 账簿号
-     * 
+     *
      * @return
      */
     public String getAs_acno() {
@@ -49,7 +49,7 @@ public class SubBalanceModel {
 
     /**
      * 账簿名
-     * 
+     *
      * @return
      */
     public String getAs_acname() {
@@ -62,7 +62,7 @@ public class SubBalanceModel {
 
     /**
      * 自身余额
-     * 
+     *
      * @return 自身余额
      */
     public Double getSelf_bal() {
@@ -75,7 +75,7 @@ public class SubBalanceModel {
 
     /**
      * 上存余额
-     * 
+     *
      * @return 上存余额
      */
     public Double getUpp_bal() {
@@ -88,7 +88,7 @@ public class SubBalanceModel {
 
     /**
      * 可用余额
-     * 
+     *
      * @return 可用余额
      */
     public Double getUse_bal() {
@@ -101,7 +101,7 @@ public class SubBalanceModel {
 
     /**
      * 上日余额
-     * 
+     *
      * @return 上日余额
      */
     public Double getLast_bal() {

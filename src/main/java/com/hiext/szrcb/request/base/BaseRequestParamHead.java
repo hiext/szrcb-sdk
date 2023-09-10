@@ -1,10 +1,10 @@
 package com.hiext.szrcb.request.base;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 @XStreamAlias("head")
 public class BaseRequestParamHead {

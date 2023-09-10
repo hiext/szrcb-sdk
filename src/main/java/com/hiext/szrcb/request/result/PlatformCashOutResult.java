@@ -5,9 +5,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 单笔对外支付
- * 
+ *
  * @author angy
- * @date 2020/11/03
+ * * @since 2020/11/03
  */
 @XStreamAlias("ap")
 public class PlatformCashOutResult {
