@@ -1,6 +1,7 @@
 package com.hiext.szrcb.model;
 
 public class SubAccountInfoModel {
+
     private String stat;
     private String acno;
     private String cur_code;
@@ -54,7 +55,7 @@ public class SubAccountInfoModel {
     /**
      * 状态(C1)
      * 
-     * @return
+     * @return string
      */
     public String getStat() {
         return stat;
@@ -63,7 +64,7 @@ public class SubAccountInfoModel {
     /**
      * 账户(C35)
      * 
-     * @return
+     * @return string
      */
     public String getAcno() {
         return acno;
@@ -72,7 +73,7 @@ public class SubAccountInfoModel {
     /**
      * 币种(C2)
      * 
-     * @return
+     * @return string
      */
     public String getCur_code() {
         return cur_code;
@@ -81,7 +82,7 @@ public class SubAccountInfoModel {
     /**
      * 账簿号(C38)
      * 
-     * @return
+     * @return string
      */
     public String getAs_acno() {
         return as_acno;
@@ -90,7 +91,7 @@ public class SubAccountInfoModel {
     /**
      * 账簿名(C140)
      * 
-     * @return
+     * @return string
      */
     public String getAs_acname() {
         return as_acname;
@@ -99,7 +100,7 @@ public class SubAccountInfoModel {
     /**
      * 上级账簿号(C140)
      * 
-     * @return
+     * @return string
      */
     public String getSup_as_acno() {
         return sup_as_acno;
@@ -108,7 +109,7 @@ public class SubAccountInfoModel {
     /**
      * 超额定支金额(N15,2)
      * 
-     * @return
+     * @return string
      */
     public Double getExceed_limit() {
         return exceed_limit;
@@ -117,7 +118,7 @@ public class SubAccountInfoModel {
     /**
      * 是否遵从主账簿计息(C1)
      * 
-     * @return
+     * @return string
      */
     public String getInherit() {
         return inherit;
@@ -126,7 +127,7 @@ public class SubAccountInfoModel {
     /**
      * 自动分配(C1)
      * 
-     * @return
+     * @return string
      */
     public String getAssign_flag() {
         return assign_flag;
@@ -135,7 +136,7 @@ public class SubAccountInfoModel {
     /**
      * 自身余额(N15,2)
      * 
-     * @return
+     * @return string
      */
     public Double getSelf_bal() {
         return self_bal;
@@ -144,7 +145,7 @@ public class SubAccountInfoModel {
     /**
      * 计息标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getAccrual_flag() {
         return accrual_flag;
@@ -153,7 +154,7 @@ public class SubAccountInfoModel {
     /**
      * 计息方式(C1)
      * 
-     * @return
+     * @return string
      */
     public String getAccrual_mode() {
         return accrual_mode;
@@ -162,7 +163,7 @@ public class SubAccountInfoModel {
     /**
      * 计息周期(C1)
      * 
-     * @return
+     * @return string
      */
     public String getAccrual_cyc() {
         return accrual_cyc;
@@ -171,7 +172,7 @@ public class SubAccountInfoModel {
     /**
      * 借方固定利率(N12,8)
      * 
-     * @return
+     * @return double
      */
     public Double getDr_rate() {
         return dr_rate;
@@ -180,7 +181,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方固定利率(N12,8)
      * 
-     * @return
+     * @return double
      */
     public Double getCr_rate() {
         return cr_rate;
@@ -188,8 +189,7 @@ public class SubAccountInfoModel {
 
     /**
      * 开户日期(C8)
-     * 
-     * @return
+     *
      */
     public String getOpen_date() {
         return open_date;
@@ -198,7 +198,7 @@ public class SubAccountInfoModel {
     /**
      * 销户日期(C8)
      * 
-     * @return
+    
      */
     public String getClose_date() {
         return close_date;
@@ -207,7 +207,7 @@ public class SubAccountInfoModel {
     /**
      * 账户名(C140)
      * 
-     * @return
+    
      */
 
     public String getAcname() {
@@ -217,7 +217,7 @@ public class SubAccountInfoModel {
     /**
      * 辅助账簿级别(Int)
      * 
-     * @return
+    
      */
     public String getAs_level() {
         return as_level;
@@ -226,7 +226,7 @@ public class SubAccountInfoModel {
     /**
      * 支控方式(C1)
      * 
-     * @return
+    
      */
     public String getPay_mode() {
         return pay_mode;
@@ -235,7 +235,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方利率类型(C1)
      * 
-     * @return
+    
      */
     public String getCr_rate_type() {
         return cr_rate_type;
@@ -244,7 +244,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方浮动基准利率类型(C2)
      * 
-     * @return
+    
      */
     public String getCr_rate_basetype() {
         return cr_rate_basetype;
@@ -253,7 +253,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方浮动利率比值(N12,8)
      * 
-     * @return
+    
      */
     public Double getCr_rate_prefer() {
         return cr_rate_prefer;
@@ -262,7 +262,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段金额1(N15,2)
      * 
-     * @return
+    
      */
     public Double getCr_amount_one() {
         return cr_amount_one;
@@ -271,7 +271,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段利率1(N12,8)
      * 
-     * @return
+    
      */
     public Double getCr_rate_one() {
         return cr_rate_one;
@@ -280,7 +280,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段金额2(N15,2)
      * 
-     * @return
+    
      */
     public Double getCr_amount_two() {
         return cr_amount_two;
@@ -289,7 +289,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段利率2(N12,8)
      * 
-     * @return
+    
      */
     public Double getCr_rate_two() {
         return cr_rate_two;
@@ -298,7 +298,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段金额3(N15,2)
      * 
-     * @return
+    
      */
     public Double getCr_amount_three() {
         return cr_amount_three;
@@ -306,8 +306,7 @@ public class SubAccountInfoModel {
 
     /**
      * 贷方分段利率3(N12,8)
-     * 
-     * @return
+     *
      */
     public Double getCr_rate_three() {
         return cr_rate_three;
@@ -315,8 +314,7 @@ public class SubAccountInfoModel {
 
     /**
      * 贷方分段金额4(N15,2)
-     * 
-     * @return
+     *
      */
     public Double getCr_amount_four() {
         return cr_amount_four;
@@ -324,8 +322,7 @@ public class SubAccountInfoModel {
 
     /**
      * 贷方分段利率4(N12,8)
-     * 
-     * @return
+     *
      */
     public Double getCr_rate_four() {
         return cr_rate_four;
@@ -334,7 +331,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段金额5(N15,2)
      * 
-     * @return
+    
      */
     public Double getCr_amount_five() {
         return cr_amount_five;
@@ -343,7 +340,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方分段利率5(N12,8)
      * 
-     * @return
+    
      */
     public Double getCr_rate_five() {
         return cr_rate_five;
@@ -352,7 +349,7 @@ public class SubAccountInfoModel {
     /**
      * 借方利率类型(C1)
      * 
-     * @return
+    
      */
     public String getDr_rate_type() {
         return dr_rate_type;
@@ -361,7 +358,7 @@ public class SubAccountInfoModel {
     /**
      * 借方浮动基准利率类型(C2)
      * 
-     * @return
+    
      */
     public String getDr_rate_basetype() {
         return dr_rate_basetype;
@@ -370,7 +367,7 @@ public class SubAccountInfoModel {
     /**
      * 借方浮动比例(N12,8)
      * 
-     * @return
+    
      */
     public String getDr_rate_prefer() {
         return dr_rate_prefer;
@@ -379,7 +376,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段金额1(N15,2)
      * 
-     * @return
+    
      */
     public Double getDr_amount_one() {
         return dr_amount_one;
@@ -388,7 +385,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段利率1(N12,8)
      * 
-     * @return
+    
      */
     public Double getDr_rate_one() {
         return dr_rate_one;
@@ -397,7 +394,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段金额2(N15,2)
      * 
-     * @return
+    
      */
     public Double getDr_amount_two() {
         return dr_amount_two;
@@ -406,7 +403,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段利率2(N12,8)
      * 
-     * @return
+    
      */
     public Double getDr_rate_two() {
         return dr_rate_two;
@@ -415,7 +412,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段金额3(N15,2)
      * 
-     * @return
+    
      */
     public Double getDr_amount_three() {
         return dr_amount_three;
@@ -424,7 +421,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段利率3(N12,8)
      * 
-     * @return
+    
      */
     public Double getDr_rate_three() {
         return dr_rate_three;
@@ -433,7 +430,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段金额4(N15,2)
      * 
-     * @return
+    
      */
     public Double getDr_amount_four() {
         return dr_amount_four;
@@ -442,7 +439,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段利率4(N12,8)
      * 
-     * @return
+    
      */
     public Double getDr_rate_four() {
         return dr_rate_four;
@@ -451,7 +448,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段金额5(N15,2)
      * 
-     * @return
+    
      */
     public Double getDr_amount_five() {
         return dr_amount_five;
@@ -460,7 +457,7 @@ public class SubAccountInfoModel {
     /**
      * 借方分段利率5(N12,8)
      * 
-     * @return
+    
      */
     public Double getDr_rate_five() {
         return dr_rate_five;
@@ -469,7 +466,7 @@ public class SubAccountInfoModel {
     /**
      * 上级账簿名(C140)
      * 
-     * @return
+    
      */
     public String getSup_as_acname() {
         return sup_as_acname;
@@ -478,7 +475,7 @@ public class SubAccountInfoModel {
     /**
      * 贷方浮动利差类型 1-按比例,2-按数值(C1)
      * 
-     * @return
+    
      */
     public String getCr_prefer_type() {
         return cr_prefer_type;
@@ -487,7 +484,7 @@ public class SubAccountInfoModel {
     /**
      * 借方浮动利差类型 1-按比例,2-按金额(C1)
      * 
-     * @return
+    
      */
     public String getDr_prefer_type() {
         return dr_prefer_type;
