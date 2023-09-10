@@ -12,7 +12,7 @@ import com.hiext.szrcb.request.SZRCBConstant;
 /**
  * 
  * @author angy
- * @date 2020/10/31
+ * * @since 2020/10/31
  */
 public class SZCRBSocketFileUtil {
 

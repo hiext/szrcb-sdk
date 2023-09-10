@@ -4,7 +4,7 @@ package com.hiext.szrcb.result.body;
  * 账簿号 账簿名 自身余额 上存余额 可用余额 上日余额 上日可用余额 冻结金额
  * 
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 public class SubBalanceResultBody {
 

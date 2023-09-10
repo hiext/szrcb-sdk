@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * 子账户余额查询
  * 
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 @XStreamAlias("ap")
 public class SubBalanceQueryParam extends BaseRequestParam {

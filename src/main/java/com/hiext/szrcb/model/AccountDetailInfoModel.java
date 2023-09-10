@@ -194,6 +194,7 @@ public class AccountDetailInfoModel {
 
     /**
      * 平台流水号（C20）
+     * @return string
      */
     public String getSerial_no() {
         return serial_no;
@@ -202,7 +203,7 @@ public class AccountDetailInfoModel {
     /**
      * 账号（C35）
      * 
-     * @return
+     * @return  string
      */
     public String getAcno() {
         return acno;
@@ -211,7 +212,7 @@ public class AccountDetailInfoModel {
     /**
      * 货币码（C2）
      * 
-     * @return
+     * @return string
      */
     public String getCur_code() {
         return cur_code;
@@ -220,7 +221,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易日期（C8）
      * 
-     * @return
+     * @return string
      */
     public String getTr_acdt() {
         return tr_acdt;
@@ -229,7 +230,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易时间交易日期（C6）
      * 
-     * @return
+     * @return string
      */
     public String getTr_time() {
         return tr_time;
@@ -238,7 +239,7 @@ public class AccountDetailInfoModel {
     /**
      * 主机流水号（C20）
      * 
-     * @return
+     * @return string
      */
     public String getHost_serial_no() {
         return host_serial_no;
@@ -247,7 +248,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易行号(C12)
      * 
-     * @return
+     * @return string
      */
     public String getTr_bankno() {
         return tr_bankno;
@@ -256,7 +257,7 @@ public class AccountDetailInfoModel {
     /**
      * 户名(C140)
      * 
-     * @return
+     * @return string
      */
     public String getAcname() {
         return acname;
@@ -265,7 +266,7 @@ public class AccountDetailInfoModel {
     /**
      * 对方账号(C35)
      * 
-     * @return
+     * @return string
      */
     public String getOpp_acno() {
         return opp_acno;
@@ -274,7 +275,7 @@ public class AccountDetailInfoModel {
     /**
      * 对方货币码(C2)
      * 
-     * @return
+     * @return string
      */
     public String getOpp_cur_code() {
         return opp_cur_code;
@@ -283,7 +284,7 @@ public class AccountDetailInfoModel {
     /**
      * |对方账号户名(C140)
      * 
-     * @return
+     * @return string
      */
     public String getOpp_acname() {
         return opp_acname;
@@ -291,8 +292,8 @@ public class AccountDetailInfoModel {
 
     /**
      * 对方账号开户行(C140)
-     * 
-     * @return
+     *
+     * @return  string
      */
     public String getOpp_bankname() {
         return opp_bankname;
@@ -300,8 +301,8 @@ public class AccountDetailInfoModel {
 
     /**
      * 对方行号(C12)
-     * 
-     * @return
+     *
+     * @return  string
      */
     public String getOpp_bankno() {
         return opp_bankno;
@@ -310,7 +311,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易类别(C1)
      * 
-     * @return
+     * @return string
      */
     public String getTr_type() {
         return tr_type;
@@ -319,7 +320,7 @@ public class AccountDetailInfoModel {
     /**
      * 钞汇标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getCsh_dra_flag() {
         return csh_dra_flag;
@@ -328,7 +329,7 @@ public class AccountDetailInfoModel {
     /**
      * 他行标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getBank_flag() {
         return bank_flag;
@@ -337,7 +338,7 @@ public class AccountDetailInfoModel {
     /**
      * 同城异地标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getArea_flag() {
         return area_flag;
@@ -346,7 +347,7 @@ public class AccountDetailInfoModel {
     /**
      * 手续费(N15,2)
      * 
-     * @return
+     * @return string
      */
     public Double getFee_amt() {
         return fee_amt;
@@ -355,7 +356,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易来源(C1)
      * 
-     * @return
+     * @return string
      */
     public String getTr_from() {
         return tr_from;
@@ -364,7 +365,7 @@ public class AccountDetailInfoModel {
     /**
      * 发生额标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getTrans_flag() {
         return trans_flag;
@@ -373,7 +374,7 @@ public class AccountDetailInfoModel {
     /**
      * 被冲销流水号(C12)
      * 
-     * @return
+     * @return string
      */
     public String getOld_serial_no() {
         return old_serial_no;
@@ -382,7 +383,7 @@ public class AccountDetailInfoModel {
     /**
      * 原交易日期(C8)
      * 
-     * @return
+     * @return string
      */
     public String getOld_acdt() {
         return old_acdt;
@@ -391,7 +392,7 @@ public class AccountDetailInfoModel {
     /**
      * 现转标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getCash_flag() {
         return cash_flag;
@@ -400,7 +401,7 @@ public class AccountDetailInfoModel {
     /**
      * 借贷标志(C1)
      * 
-     * @return
+     * @return string
      */
     public String getCrdr_flag() {
         return crdr_flag;
@@ -409,7 +410,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易金额(N15,2)
      * 
-     * @return
+     * @return Double
      */
     public Double getAmt() {
         return amt;
@@ -418,7 +419,7 @@ public class AccountDetailInfoModel {
     /**
      * 余额(N15,2)
      * 
-     * @return
+     * @return Double
      */
     public Double getBalance() {
         return balance;
@@ -427,7 +428,7 @@ public class AccountDetailInfoModel {
     /**
      * 上笔余额(N15,2)
      * 
-     * @return
+     * @return Double
      */
     public Double getLast_bal() {
         return last_bal;
@@ -436,7 +437,7 @@ public class AccountDetailInfoModel {
     /**
      * 冻结金额(N15,2)
      * 
-     * @return
+     * @return Double
      */
     public Double getFreeze_amt() {
         return freeze_amt;
@@ -445,7 +446,7 @@ public class AccountDetailInfoModel {
     /**
      * 凭证种类(C20)
      * 
-     * @return
+     * @return  string
      */
     public String getCert_type() {
         return cert_type;
@@ -454,7 +455,7 @@ public class AccountDetailInfoModel {
     /**
      * 凭证批次号(C20)
      * 
-     * @return
+     * @return string
      */
     public String getCert_batchno() {
         return cert_batchno;
@@ -463,7 +464,7 @@ public class AccountDetailInfoModel {
     /**
      * 凭证号码(C20)
      * 
-     * @return
+     * @return string
      */
     public String getCert_no() {
         return cert_no;
@@ -472,7 +473,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易码(C6)
      * 
-     * @return
+     * @return string
      */
     public String getTr_code() {
         return tr_code;
@@ -481,7 +482,7 @@ public class AccountDetailInfoModel {
     /**
      * 柜员号(C10)
      * 
-     * @return
+     * @return string
      */
     public String getUser_no() {
         return user_no;
@@ -490,7 +491,7 @@ public class AccountDetailInfoModel {
     /**
      * 传票号(C20)
      * 
-     * @return
+     * @return string
      */
     public String getSub_no() {
         return sub_no;
@@ -499,7 +500,7 @@ public class AccountDetailInfoModel {
     /**
      * 摘要(C60)
      * 
-     * @return
+     * @return string
      */
     public String getPurpose() {
         return purpose;
@@ -508,7 +509,7 @@ public class AccountDetailInfoModel {
     /**
      * 附言(C300)
      * 
-     * @return
+     * @return string
      */
     public String getPostscript() {
         return postscript;
@@ -517,7 +518,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易时间戳
      * 
-     * @return
+     * @return string
      */
     public String getTr_timestamp() {
         return tr_timestamp;
@@ -526,7 +527,7 @@ public class AccountDetailInfoModel {
     /**
      * 备注字段一(C255)
      * 
-     * @return
+     * @return string
      */
     public String getReserved1() {
         return reserved1;
@@ -535,7 +536,7 @@ public class AccountDetailInfoModel {
     /**
      * 备注字段二(C255)
      * 
-     * @return
+     * @return string
      */
     public String getReserved2() {
         return reserved2;
@@ -544,7 +545,7 @@ public class AccountDetailInfoModel {
     /**
      * 交易行名
      * 
-     * @return
+     * @return string
      */
     public String getTr_bankname() {
         return tr_bankname;
@@ -553,7 +554,7 @@ public class AccountDetailInfoModel {
     /**
      * 支付行号
      * 
-     * @return
+     * @return string
      */
     public String getBank_no() {
         return bank_no;
@@ -561,8 +562,8 @@ public class AccountDetailInfoModel {
 
     /**
      * 支付行名
-     * 
-     * @return
+     *
+     * @return  string
      */
     public String getBankname() {
         return bankname;
@@ -571,7 +572,7 @@ public class AccountDetailInfoModel {
     /**
      * 打印次数
      * 
-     * @return
+     * @return string
      */
     public String getPrintcount() {
         return printcount;
@@ -580,7 +581,7 @@ public class AccountDetailInfoModel {
     /**
      * 借入金额(N15,2)
      * 
-     * @return
+     * @return string
      */
     public Double getPayamt() {
         return payamt;
@@ -588,8 +589,8 @@ public class AccountDetailInfoModel {
 
     /**
      * 借出金额(N15,2)
-     * 
-     * @return
+     *
+     * @return string
      */
     public Double getRcvamt() {
         return rcvamt;

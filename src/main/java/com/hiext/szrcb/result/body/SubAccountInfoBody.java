@@ -4,7 +4,7 @@ package com.hiext.szrcb.result.body;
  * 子账号信息
  * 
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 public class SubAccountInfoBody {
     private Integer record_num;

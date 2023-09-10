@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * 数据计算
  * 
  * @author angy
- * @date 2020/08/08
+ * * @since 2020/08/08
  */
 public class ArithUtil {
     private static final int DEF_DIV_SCALE = 10;

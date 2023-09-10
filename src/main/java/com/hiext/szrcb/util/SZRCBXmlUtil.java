@@ -12,7 +12,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
  * 输出xml和解析xml的工具类
  * 
  * @author angy
- * @date 2020/07/04
+ * * @since 2020/07/04
  */
 public class SZRCBXmlUtil {
 

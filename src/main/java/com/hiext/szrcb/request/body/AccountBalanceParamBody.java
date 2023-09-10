@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
  * 3.1.1 查询账户核心余额 (200108)
  * 
  * @author angy
- * @date 2020/11/03
+ * * @since 2020/11/03
  */
 public class AccountBalanceParamBody {
     @NotNull(message = "主体账号 char(35)空限制")

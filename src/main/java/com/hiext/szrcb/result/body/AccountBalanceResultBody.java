@@ -3,7 +3,7 @@ package com.hiext.szrcb.result.body;
 /**
  * 
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 public class AccountBalanceResultBody {
     private String acno;

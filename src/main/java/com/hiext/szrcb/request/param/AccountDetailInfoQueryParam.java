@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * 3.1.2 查询账户明细 (200110)
  * 
  * @author angy
- * @date 2020/10/30
+ * * @since 2020/10/30
  */
 @XStreamAlias("ap")
 public class AccountDetailInfoQueryParam extends BaseRequestParam {

@@ -12,15 +12,17 @@ import java.net.UnknownHostException;
 /**
  * 
  * @author angy
- * @date 2020/10/28
+ * * @since 2020/10/28
  */
 public class SZRCBSocketClient {
 
     public static final String post(String host, int port, String xml) {
-        if (xml == null || "".equals(xml))
+        if (xml == null || "".equals(xml)) {
             return null;
-        if (host == null || "".equals(host))
+        }
+        if (host == null || "".equals(host)) {
             return null;
+        }
         Socket socket = null;
         BufferedReader br = null;
         OutputStream outputStream = null;

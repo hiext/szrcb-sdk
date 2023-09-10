@@ -5,7 +5,7 @@ import com.hiext.szrcb.util.PropertiesUtil;
 /**
  * 
  * @author angy
- * @date 2020/07/04
+ * * @since 2020/07/04
  */
 public class SZRCBConstant {
     private static PropertiesUtil propertiesUtil = new PropertiesUtil("application.properties");

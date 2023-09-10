@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 /**
  * 
  * @author angy
- * @date 2020/11/02
+ * * @since 2020/11/02
  */
 public class SubAccountInfoQueryBody {
     @NotNull(message = "主体账号 char(35)空限制")
