@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<properties>
+		<!-- 文件输出格式 -->
+		<property name="COLOR_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx</property>
+		<property name="PATTERN">%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</property>
+	</properties>
+
+	<appenders>
+		<Console name="CONSOLE" target="system_out">
+			<PatternLayout pattern="${PATTERN}" />
+		</Console>
+	</appenders>
+
+	<loggers>
+		<logger name="com.hiext.szrcb" level="info" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+		<logger name="com.hiext.szrcb.base" level="info" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+		<logger name="com.hiext.szrcb.util" level="info" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+        <logger name="com.hiext.szrcb.base" level="info" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+		<root level="error">
+			<appenderref ref="CONSOLE" />
+			<appenderref ref="DAILY" />
+		</root>
+	</loggers>
+</configuration>
