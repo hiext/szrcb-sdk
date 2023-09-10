@@ -1,16 +1,16 @@
 package com.hiext.szrcb.util;
 
-import java.io.StringWriter;
-import java.nio.charset.StandardCharsets;
-
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.naming.NoNameCoder;
 import com.thoughtworks.xstream.io.xml.CompactWriter;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+
 /**
  * 输出xml和解析xml的工具类
- * 
+ *
  * @author angy
  * * @since 2020/07/04
  */
@@ -29,7 +29,7 @@ public class SZRCBXmlUtil {
         xstream.ignoreUnknownElements();
         xstream.autodetectAnnotations(true);
         XStream.setupDefaultSecurity(xstream);
-        xstream.allowTypesByWildcard(new String[] {"com.hiext.szrcb.*.**", "java.lang.**", "java.math.**"});
+        xstream.allowTypesByWildcard(new String[]{"com.hiext.szrcb.*.**", "java.lang.**", "java.math.**"});
         return xstream;
     }
 
@@ -64,9 +64,8 @@ public class SZRCBXmlUtil {
 
     /**
      * 转换成JavaBean
-     * 
-     * @param <T>
      *
+     * @param <T>
      * @param xmlStr
      * @param cls
      * @return
@@ -78,7 +77,7 @@ public class SZRCBXmlUtil {
         // 设置JavaBean的类别名
         xstream.aliasType("ap", cls);
         @SuppressWarnings("unchecked")
-        T result = (T)xstream.fromXML(xmlStr);
+        T result = (T) xstream.fromXML(xmlStr);
         return result;
     }
 

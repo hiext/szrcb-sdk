@@ -5,7 +5,7 @@ import javax.validation.constraints.Size;
 
 /**
  * 3.1.1 查询账户核心余额 (200108)
- * 
+ *
  * @author angy
  * * @since 2020/11/03
  */

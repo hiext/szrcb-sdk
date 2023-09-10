@@ -7,7 +7,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 3.1.10 多级账簿明细查询（200103）
- * 
+ *
  * @author angy
  * * @since 2020/10/30
  */

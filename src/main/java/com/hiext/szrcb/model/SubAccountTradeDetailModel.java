@@ -2,7 +2,7 @@ package com.hiext.szrcb.model;
 
 /**
  * 子账号交易明细
- * 
+ *
  * @author angy
  * * @since 2020/11/01
  */

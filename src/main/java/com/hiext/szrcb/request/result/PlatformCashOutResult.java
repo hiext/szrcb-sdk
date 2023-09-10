@@ -5,7 +5,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 单笔对外支付
- * 
+ *
  * @author angy
  * * @since 2020/11/03
  */

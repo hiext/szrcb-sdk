@@ -2,7 +2,7 @@ package com.hiext.szrcb.result.body;
 
 /**
  * 子账号信息
- * 
+ *
  * @author angy
  * * @since 2020/10/30
  */

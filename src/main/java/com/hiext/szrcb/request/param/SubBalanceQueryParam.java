@@ -7,7 +7,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 子账户余额查询
- * 
+ *
  * @author angy
  * * @since 2020/10/30
  */

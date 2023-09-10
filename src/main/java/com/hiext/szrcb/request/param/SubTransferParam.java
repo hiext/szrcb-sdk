@@ -7,7 +7,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * 3.1.11 多级账簿余额调整（100105）
- * 
+ *
  * @author angy
  * * @since 2020/10/30
  */

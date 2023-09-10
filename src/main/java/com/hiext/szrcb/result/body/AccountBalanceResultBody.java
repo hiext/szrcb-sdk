@@ -1,7 +1,6 @@
 package com.hiext.szrcb.result.body;
 
 /**
- * 
  * @author angy
  * * @since 2020/10/30
  */
@@ -15,7 +14,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 账号
-     * 
+     *
      * @return
      */
     public String getAcno() {
@@ -28,7 +27,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 币种
-     * 
+     *
      * @return
      */
     public String getCur_code() {
@@ -41,7 +40,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 账户名称
-     * 
+     *
      * @return
      */
     public String getAcname() {
@@ -54,7 +53,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 账户余额
-     * 
+     *
      * @return
      */
     public Double getBalance() {
@@ -67,7 +66,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 可用余额
-     * 
+     *
      * @return
      */
     public Double getUse_balance() {
@@ -80,7 +79,7 @@ public class AccountBalanceResultBody {
 
     /**
      * 冻结金额
-     * 
+     *
      * @return
      */
     public Double getFreeze_bal() {

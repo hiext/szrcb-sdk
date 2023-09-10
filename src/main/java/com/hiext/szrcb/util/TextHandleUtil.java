@@ -1,9 +1,9 @@
 package com.hiext.szrcb.util;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.alibaba.fastjson.JSONObject;
 
 public class TextHandleUtil {
 
@@ -47,7 +47,7 @@ public class TextHandleUtil {
 
     public static void main(String[] args) {
         String text =
-            "as_acno|as_acname|self_bal|upp_bal|use_bal|last_bal|last_usebal|freeze_bal|li_acno|999999|清分账簿|0.03|0.03|0.03|0.00|0.00|0.00||";
+                "as_acno|as_acname|self_bal|upp_bal|use_bal|last_bal|last_usebal|freeze_bal|li_acno|999999|清分账簿|0.03|0.03|0.03|0.00|0.00|0.00||";
         List<JSONObject> te = handle(text, 1, 9);
         for (JSONObject jsonObject : te) {
             System.out.println(jsonObject.toJSONString());

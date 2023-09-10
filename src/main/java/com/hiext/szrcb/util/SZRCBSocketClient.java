@@ -10,7 +10,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * 
  * @author angy
  * * @since 2020/10/28
  */
@@ -103,11 +102,11 @@ public class SZRCBSocketClient {
         // String re = post("120.53.108.30", 10010, data);
         // System.out.print(re);
         String data = "<ap>\r\n" + "  <head>\r\n" + "    <tr_code>590109</tr_code>\r\n" + "    <req_no></req_no>\r\n"
-            + "    <tr_acdt>20201030</tr_acdt>\r\n" + "    <tr_time>152726</tr_time>\r\n"
-            + "    <channel>5</channel>\r\n" + "    <sign>0</sign>\r\n" + "    <file_flag>0</file_flag>\r\n"
-            + "    <reserved></reserved>\r\n" + "  </head>\r\n" + "  <body>\r\n"
-            + "    <acno>0706678521120100480205</acno>\r\n" + "    <as_acno></as_acno>\r\n"
-            + "    <as_acname>张三</as_acname>\r\n" + "  </body>\r\n" + "</ap>";
+                + "    <tr_acdt>20201030</tr_acdt>\r\n" + "    <tr_time>152726</tr_time>\r\n"
+                + "    <channel>5</channel>\r\n" + "    <sign>0</sign>\r\n" + "    <file_flag>0</file_flag>\r\n"
+                + "    <reserved></reserved>\r\n" + "  </head>\r\n" + "  <body>\r\n"
+                + "    <acno>0706678521120100480205</acno>\r\n" + "    <as_acno></as_acno>\r\n"
+                + "    <as_acname>张三</as_acname>\r\n" + "  </body>\r\n" + "</ap>";
         String re = post("120.53.108.30", 10010, data);
         System.out.print(re);
     }

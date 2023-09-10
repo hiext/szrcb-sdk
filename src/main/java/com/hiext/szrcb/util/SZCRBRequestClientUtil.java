@@ -1,23 +1,21 @@
 package com.hiext.szrcb.util;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Set;
+import com.hiext.szrcb.request.SZRCBConstant;
+import org.hibernate.validator.internal.util.StringHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
-
-import org.hibernate.validator.internal.util.StringHelper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hiext.szrcb.request.SZRCBConstant;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Set;
 
 public class SZCRBRequestClientUtil<P, T> {
-    private Logger logger = LoggerFactory.getLogger(SZCRBRequestClientUtil.class);
+    private final Logger logger = LoggerFactory.getLogger(SZCRBRequestClientUtil.class);
     private String userName;
     private Validator validator = null;
 
@@ -47,7 +45,7 @@ public class SZCRBRequestClientUtil<P, T> {
         ArrayList<String> validateString = new ArrayList<>();
         for (ConstraintViolation<P> constraintViolation : set) {
             validateString
-                .add("字段：" + constraintViolation.getPropertyPath().toString() + "-" + constraintViolation.getMessage());
+                    .add("字段：" + constraintViolation.getPropertyPath().toString() + "-" + constraintViolation.getMessage());
             logger.info("错误：" + constraintViolation.getMessage());
             logger.info("字段：" + constraintViolation.getPropertyPath().toString());
         }
@@ -64,13 +62,13 @@ public class SZCRBRequestClientUtil<P, T> {
         try {
             Method userNameMethod = p.getClass().getMethod("getUserName");
             Object invoke2 = userNameMethod.invoke(p);
-            userName = (String)invoke2;
+            userName = (String) invoke2;
             Method portMethod = p.getClass().getMethod("getPort");
             Object portInvoke = portMethod.invoke(p);
-            port = (String)portInvoke;
+            port = (String) portInvoke;
             Method hostMethod = p.getClass().getMethod("getHost");
             Object hostInvoke = hostMethod.invoke(p);
-            targerHost = (String)hostInvoke;
+            targerHost = (String) hostInvoke;
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (SecurityException e) {
@@ -139,7 +137,7 @@ public class SZCRBRequestClientUtil<P, T> {
         if (res == null) {
             return null;
         }
-        T t = (T)SZRCBXmlUtil.toBean(res, cls);
+        T t = SZRCBXmlUtil.toBean(res, cls);
         return t;
     }
 

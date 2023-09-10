@@ -1,5 +1,7 @@
 package com.hiext.szrcb.util;
 
+import com.hiext.szrcb.request.SZRCBConstant;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,10 +9,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.hiext.szrcb.request.SZRCBConstant;
-
 /**
- * 
  * @author angy
  * * @since 2020/10/31
  */
@@ -28,7 +27,7 @@ public class SZCRBSocketFileUtil {
         Socket socket = null;
         OutputStream outputStream = null;
         InputStream inputStream = null;
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(); 
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         try {
             // 1.获取文件size
             String getSize = "SIZE " + fileName;
@@ -121,8 +120,7 @@ public class SZCRBSocketFileUtil {
             String cl = dataSig(close);
             outputStream.write(cl.getBytes());
             outputStream.flush();
-            byte[] byteArray = byteArrayOutputStream.toByteArray();
-            buffer.append(new String(byteArray, "GBK"));
+            buffer.append(byteArrayOutputStream.toString("GBK"));
             if (!socket.isOutputShutdown()) {
                 socket.shutdownOutput();// 关闭输出流
             }
@@ -159,10 +157,10 @@ public class SZCRBSocketFileUtil {
                 e.printStackTrace();
             }
             try {
-                if(byteArrayOutputStream != null) {
+                if (byteArrayOutputStream != null) {
                     byteArrayOutputStream.close();
                 }
-            }catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
