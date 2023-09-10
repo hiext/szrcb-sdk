@@ -1,5 +1,13 @@
 package com.hiext.szrcb.request;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hiext.szrcb.model.AccountDetailInfoModel;
@@ -44,13 +52,6 @@ import com.hiext.szrcb.result.body.TradeStatusResultBody;
 import com.hiext.szrcb.util.SZCRBRequestClientUtil;
 import com.hiext.szrcb.util.SZCRBSocketFileUtil;
 import com.hiext.szrcb.util.TextHandleUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class SZCRBRequestUtils {
 
@@ -145,8 +146,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(endDate);
         body.setStart_date(startDate);
         param.setBody(body);
-        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         AccountDetailInfoQueryResult result = clientUtil.send(param, AccountDetailInfoQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -183,8 +183,7 @@ public class SZCRBRequestUtils {
         param.setPort(port);
         param.setUserName(userName);
         param.setBody(body);
-        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         AccountDetailInfoQueryResult result = clientUtil.send(param, AccountDetailInfoQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -218,8 +217,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(dateFormat.format(endDate));
         body.setStart_date(dateFormat.format(startDate));
         param.setBody(body);
-        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         AccountDetailInfoQueryResult result = clientUtil.send(param, AccountDetailInfoQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -257,8 +255,7 @@ public class SZCRBRequestUtils {
         param.setPort(port);
         param.setUserName(userName);
         param.setBody(body);
-        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<AccountDetailInfoQueryParam, AccountDetailInfoQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         AccountDetailInfoQueryResult result = clientUtil.send(param, AccountDetailInfoQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -298,8 +295,7 @@ public class SZCRBRequestUtils {
         param.setBody(body);
         body.setAcno(mainNo);
         body.setAs_acname(subAccountName);
-        SZCRBRequestClientUtil<SubAccountCreateParam, SubAccountCreateResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountCreateParam, SubAccountCreateResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountCreateResult result = clientUtil.send(param, SubAccountCreateResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             return result.getBody();
@@ -328,8 +324,7 @@ public class SZCRBRequestUtils {
         param.setBody(body);
         body.setAcno(mainNo);
         body.setAs_acname(subAccountName);
-        SZCRBRequestClientUtil<SubAccountCreateParam, SubAccountCreateResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountCreateParam, SubAccountCreateResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountCreateResult result = clientUtil.send(param, SubAccountCreateResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             return result.getBody();
@@ -350,8 +345,7 @@ public class SZCRBRequestUtils {
         body.setAcno(mainNo);
         body.setAs_acno(subNo);
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountInfoQueryParam, SubAccountInfoResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountInfoQueryParam, SubAccountInfoResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountInfoResult result = clientUtil.send(param, SubAccountInfoResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -396,8 +390,7 @@ public class SZCRBRequestUtils {
         body.setAcno(mainNo);
         body.setAs_acno(subNo);
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountInfoQueryParam, SubAccountInfoResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountInfoQueryParam, SubAccountInfoResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountInfoResult result = clientUtil.send(param, SubAccountInfoResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -427,9 +420,6 @@ public class SZCRBRequestUtils {
      *
      * @param mainNo
      * @param subNo
-     * @param host
-     * @param port
-     * @param userName
      * @return
      */
     public static SubBalanceModel subBalanceQuery(String mainNo, String subNo) {
@@ -501,8 +491,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(endDate);
         body.setStart_date(startDate);
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountTradeDetailQueryResult result = clientUtil.send(param, SubAccountTradeDetailQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -519,8 +508,8 @@ public class SZCRBRequestUtils {
             }
             List<JSONObject> jsonObjects = TextHandleUtil.handle(seString, dataSize, fieldSize);
             for (JSONObject jsonObject : jsonObjects) {
-                SubAccountTradeDetailModel e =
-                        JSON.parseObject(jsonObject.toJSONString(), SubAccountTradeDetailModel.class);
+                SubAccountTradeDetailModel e = JSON.parseObject(jsonObject.toJSONString(),
+                    SubAccountTradeDetailModel.class);
                 res.add(e);
             }
             return res;
@@ -543,7 +532,8 @@ public class SZCRBRequestUtils {
      * @return
      */
     public static List<SubAccountTradeDetailModel> subAccountTradeDetail(String mainNo, String subNo, String tradeType,
-                                                                         String startDate, String endDate, String host, String port, String userName) {
+                                                                         String startDate, String endDate, String host,
+                                                                         String port, String userName) {
         SubAccountTradeDetailQueryParam param = new SubAccountTradeDetailQueryParam();
         SubAccountTradeDetailQueryBody body = new SubAccountTradeDetailQueryBody();
         param.setHost(host);
@@ -556,8 +546,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(endDate);
         body.setStart_date(startDate);
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountTradeDetailQueryResult result = clientUtil.send(param, SubAccountTradeDetailQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -574,8 +563,8 @@ public class SZCRBRequestUtils {
             }
             List<JSONObject> jsonObjects = TextHandleUtil.handle(seString, dataSize, fieldSize);
             for (JSONObject jsonObject : jsonObjects) {
-                SubAccountTradeDetailModel e =
-                        JSON.parseObject(jsonObject.toJSONString(), SubAccountTradeDetailModel.class);
+                SubAccountTradeDetailModel e = JSON.parseObject(jsonObject.toJSONString(),
+                    SubAccountTradeDetailModel.class);
                 res.add(e);
             }
             return res;
@@ -595,7 +584,8 @@ public class SZCRBRequestUtils {
      * @return
      */
     public static List<SubAccountTradeDetailModel> subAccountTradeDetailByDate(String mainNo, String subNo,
-                                                                               String tradeType, Date startDate, Date endDate) {
+                                                                               String tradeType, Date startDate,
+                                                                               Date endDate) {
         SubAccountTradeDetailQueryParam param = new SubAccountTradeDetailQueryParam();
         SubAccountTradeDetailQueryBody body = new SubAccountTradeDetailQueryBody();
         body.setAcno(mainNo);
@@ -605,8 +595,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(dateFormat.format(endDate));
         body.setStart_date(dateFormat.format(startDate));
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountTradeDetailQueryResult result = clientUtil.send(param, SubAccountTradeDetailQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -623,8 +612,8 @@ public class SZCRBRequestUtils {
             }
             List<JSONObject> jsonObjects = TextHandleUtil.handle(seString, dataSize, fieldSize);
             for (JSONObject jsonObject : jsonObjects) {
-                SubAccountTradeDetailModel e =
-                        JSON.parseObject(jsonObject.toJSONString(), SubAccountTradeDetailModel.class);
+                SubAccountTradeDetailModel e = JSON.parseObject(jsonObject.toJSONString(),
+                    SubAccountTradeDetailModel.class);
                 res.add(e);
             }
             return res;
@@ -647,7 +636,9 @@ public class SZCRBRequestUtils {
      * @return
      */
     public static List<SubAccountTradeDetailModel> subAccountTradeDetailByDate(String mainNo, String subNo,
-                                                                               String tradeType, Date startDate, Date endDate, String host, String port, String userName) {
+                                                                               String tradeType, Date startDate,
+                                                                               Date endDate, String host, String port,
+                                                                               String userName) {
         SubAccountTradeDetailQueryParam param = new SubAccountTradeDetailQueryParam();
         SubAccountTradeDetailQueryBody body = new SubAccountTradeDetailQueryBody();
         param.setHost(host);
@@ -661,8 +652,7 @@ public class SZCRBRequestUtils {
         body.setEnd_date(dateFormat.format(endDate));
         body.setStart_date(dateFormat.format(startDate));
         param.setBody(body);
-        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<SubAccountTradeDetailQueryParam, SubAccountTradeDetailQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         SubAccountTradeDetailQueryResult result = clientUtil.send(param, SubAccountTradeDetailQueryResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
@@ -679,8 +669,8 @@ public class SZCRBRequestUtils {
             }
             List<JSONObject> jsonObjects = TextHandleUtil.handle(seString, dataSize, fieldSize);
             for (JSONObject jsonObject : jsonObjects) {
-                SubAccountTradeDetailModel e =
-                        JSON.parseObject(jsonObject.toJSONString(), SubAccountTradeDetailModel.class);
+                SubAccountTradeDetailModel e = JSON.parseObject(jsonObject.toJSONString(),
+                    SubAccountTradeDetailModel.class);
                 res.add(e);
             }
             return res;
@@ -720,9 +710,6 @@ public class SZCRBRequestUtils {
      * 子账号余额调整
      *
      * @param subTransferBody
-     * @param host
-     * @param port
-     * @param userName
      * @return
      */
     public static SubTransferResult subTransfer(SubTransferBody subTransferBody) {
@@ -756,8 +743,7 @@ public class SZCRBRequestUtils {
         param.setHost(host);
         param.setPort(port);
         param.setUserName(userName);
-        SZCRBRequestClientUtil<TradeStatusQueryParam, TradeStatusQueryResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<TradeStatusQueryParam, TradeStatusQueryResult> clientUtil = new SZCRBRequestClientUtil<>();
         TradeStatusQueryResult result = clientUtil.send(param, TradeStatusQueryResult.class);
         if (result != null && param.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             return result.getBody();
@@ -789,8 +775,7 @@ public class SZCRBRequestUtils {
         body.setBegDtTmstmp(simpleDateFormat.format(startTime));
         body.setEndDtTmstmp(simpleDateFormat.format(endTime));
         param.setBody(body);
-        SZCRBRequestClientUtil<QrCashInDetailQueryParam, QrCashInDetailResult> clientUtil =
-                new SZCRBRequestClientUtil<>();
+        SZCRBRequestClientUtil<QrCashInDetailQueryParam, QrCashInDetailResult> clientUtil = new SZCRBRequestClientUtil<>();
         QrCashInDetailResult result = clientUtil.send(param, QrCashInDetailResult.class);
         if (result != null && result.getHead() != null && "0".equals(result.getHead().getSucc_flag())) {
             BaseResponseHead resultHead = result.getHead();
